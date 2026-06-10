@@ -69,7 +69,7 @@ deadlines:
     deadline: [ISO 日期]
     calc_note: "[推算口径，如：送达次日起算 15 日，期满日非节假日]"
     verified: [true/false]
-    controlling_sources: "[精确条号 + 核验日期，如：民事诉讼法§171 [已验证—2026-06-10]]"
+    controlling_sources: "[精确条号 + 核验日期，如：民事诉讼法§[条号] [已验证—YYYY-MM-DD]]"
     status: [open / done]
     owner: [承办人]
     notes: ""
