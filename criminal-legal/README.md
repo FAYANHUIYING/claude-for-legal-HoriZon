@@ -1,6 +1,6 @@
 # 刑事法务（criminal-legal）
 
-> 宏志法律智能体（claude-for-legal · HoriZon 版）业务插件之一。基于 Anthropic claude-for-legal（Apache-2.0）二次开发。
+> 宏志法律智能体（claude-for-legal · HoriZon 版）业务插件之一。
 > **所有输出均为供执业律师审查的草稿，不构成法律意见。**
 
 ## 首次使用

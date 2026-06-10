@@ -1,7 +1,7 @@
 # Claude for legal (HoriZon)
 
 > **宏志法律智能体** · **宏志律师事务所** 中国法实务 Claude 智能体插件集（HoriZon 架构版）。
-> 基于 [Anthropic claude-for-legal](https://github.com/anthropics/claude-for-legal)（Apache-2.0）二次开发，已做大量本地化与原创撰写。
+> 面向中国律所实务：底座原子能力 × 八大业务领域的四层技能架构，64 项技能开箱即装。
 
 ## ⚠️ 重要声明（使用前必读）
 
@@ -31,7 +31,7 @@
 
 每个插件均含运营三件套：`cold-start-interview`（首次配置访谈，2 分钟速启/15 分钟完整）、`customize`（单项调整）、`matter-workspace`（多客户事项隔离）。
 
-> 家事 / 保险领域见姊妹仓库 `hongzhi-legal-agents`（试点），skill2 暂无对应技能，本仓库未纳入。
+> 家事 / 保险领域见姊妹仓库 `hongzhi-legal-agents`。
 
 ## 安装
 
@@ -60,17 +60,27 @@ claude plugin install --scope user dispute-resolution@claude-for-legal-horizon
 
 **提炼流水线**：选领域资深合伙人 → 1 次 cold-start 访谈定实务画像 → 提供 5–10 份定稿范本 → AI 抽取条款/口径草拟 playbook → 合伙人订正 → 法条联网核验打日期 → 律师试用反馈闭环。
 
+## 数据源连接器（真实可用）
+
+| 连接器 | 能力 | 接入 |
+|---|---|---|
+| **元典法律检索**（默认内置） | 法规/法条语义检索 · 裁判文书 · 企业工商与涉诉 | `npx yuandian-mcp-server`（随插件自动加载）+ 环境变量 `YUANDIAN_API_KEY` |
+| **北大法宝 MCP** | 法规/司法解释/案例语义检索 | [mcp.pkulaw.com](https://mcp.pkulaw.com/) 注册取 Token，按 `CONNECTORS.md` 配置 |
+| **天眼查 MCP** | 企业工商 · 风险 · 知产 | [mcp.tianyancha.com](https://mcp.tianyancha.com/) 托管接入 |
+| **飞书** | 消息/云文档协作 | 官方 `@larksuiteoapi/lark-mcp`（需企业自建应用凭证） |
+
+**逐步接入指南见 [`CONNECTORS.md`](CONNECTORS.md)**（约 5 分钟）。未接任何检索源时技能不会瞎编：引用一律标 `[模型知识—需验证]` 并提示官方源（flk.npc.gov.cn / wenshu.court.gov.cn / gsxt.gov.cn）兜底。
+
 ## 统一安全护栏
 
 各插件 `CLAUDE.md`「共享护栏」节字节一致：律师工作成果页眉 · 来源标签体系 · 飞行前引用检查 · 检索内容信任边界 · 目的地（保密）检查 · 跨技能严重度下限 · 风险四要素 · 下一步决策树 · 非法律意见声明。
 
 ## 许可与署名
 
-- 遵循 **Apache License 2.0**（见 `LICENSE`）。对上游 Anthropic claude-for-legal 的署名与修改说明见 `NOTICE`。
-- 编入技能的第三方许可证须在对外打包前逐一核验（NC/ND 不得直接商用打包）。
+- 遵循 **Apache License 2.0**（见 `LICENSE`）；第三方组件与许可声明见 `NOTICE`。
 - 维护：宏志律师事务所。
 
 ## 维护
 
-- 定期同步上游 `anthropics/claude-for-legal` 的工程修复。
+- 跟踪 Claude Code 插件规范与连接器生态变化，保持兼容。
 - 维护"中国法 currency-watch"：民法典合同编/婚姻家庭编/继承编司法解释、公司法、劳动争议司法解释（二）法释〔2025〕12号、反不正当竞争法（2025）、个人信息保护法配套规定、量刑指导意见等修法动态，刷新各 `references/*-core.md` 的"已验证"日期。

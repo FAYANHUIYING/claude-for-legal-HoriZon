@@ -1,6 +1,6 @@
 # CLAUDE.md — 维护指引（claude-for-legal · HoriZon · 宏志法律智能体）
 
-本仓库是一个 **Claude Code 插件 marketplace**：宏志律师事务所中国法实务插件集，采用"底座原子能力 + 八大业务领域"的四层架构。基于 Anthropic claude-for-legal（Apache-2.0）二次开发。绝大多数工作是编辑**提示内容**（技能、实务画像、法条库），而非应用代码。
+本仓库是一个 **Claude Code 插件 marketplace**：宏志律师事务所中国法实务插件集，采用"底座原子能力 + 八大业务领域"的四层架构。绝大多数工作是编辑**提示内容**（技能、实务画像、法条库），而非应用代码。
 
 > 非 Anthropic 官方产品；所有输出为**律师审查草稿，非法律意见**。
 
@@ -10,7 +10,7 @@
 .claude-plugin/marketplace.json   # marketplace 清单，每插件一条（共 9 条）
 <插件>/                            # hongzhi-core + 8 业务插件
   .claude-plugin/plugin.json       # 插件清单（name/version/description/author）
-  .mcp.json                        # 该插件连接的 MCP（统一远程 HTTPS；hongzhi-core 无）
+  .mcp.json                        # 该插件连接的 MCP（默认内置元典；hongzhi-core 无。接入指南见 CONNECTORS.md）
   CLAUDE.md                        # 实务画像模板 + 共享护栏（各插件「共享护栏」节字节一致）
   README.md                        # 插件说明（技能清单自动生成）
   skills/<名>/SKILL.md             # 一目录一技能
@@ -62,10 +62,10 @@ claude plugin validate hongzhi-core   # 其余 8 插件同
 
 ## 合规
 
-- 遵循 **Apache License 2.0**（见 `LICENSE`）；对上游 `anthropics/claude-for-legal` 的署名与修改说明见 `NOTICE`。
+- 遵循 **Apache License 2.0**（见 `LICENSE`）；第三方组件与许可声明见 `NOTICE`。
 - 编入技能的第三方来源许可证须在对外打包前逐一核验；含 NC（禁商用）/ND（禁改）者不得直接商用打包。
 
 ## 维护
 
-- 定期同步上游 `anthropics/claude-for-legal` 的工程修复。
+- 跟踪 Claude Code 插件规范与连接器生态变化，保持兼容。
 - 维护"中国法 currency-watch"：民法典各编司法解释、公司法、劳动争议司法解释（二）法释〔2025〕12号、反不正当竞争法（2025）、个人信息保护法配套规定、量刑指导意见等——纳入对应 `references/*-core.md` 复核并刷新"已验证"日期。
