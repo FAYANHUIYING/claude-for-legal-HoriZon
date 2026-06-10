@@ -1,29 +1,32 @@
 claude-for-legal (HoriZon) · 宏志法律智能体
 Copyright 2026 宏志律师事务所 (Hongzhi Law Firm)
 
-本产品基于以下开源项目二次开发：
+本项目由宏志律师事务所联合上海法演数据科技有限公司构建与维护。项目内容按来源分三类：
 
-1) Anthropic claude-for-legal
-   Copyright Anthropic, PBC
-   Licensed under the Apache License, Version 2.0
-   https://github.com/anthropics/claude-for-legal
+1. 原创内容（本项目撰写）
+   "底座原子能力 + 八大业务领域"的四层架构（HoriZon 架构）及全部中国法实务表述；
+   各插件运营三件套（cold-start-interview / customize / matter-workspace，27 项）、
+   期限台账与期限监控代理（deadline-tracker / deadline-watcher）、要件分析表
+   （element-analysis）、在办案件组合视图（portfolio-status）、审查口径自学习闭环
+   （deal-debrief / playbook-monitor / review-proposals）等 30 余项技能与全部监控代理；
+   连接器接入指南（CONNECTORS.md）、各领域法条库与实务画像模板。
 
-本项目以 Anthropic claude-for-legal 的架构与脚手架（marketplace/plugin 清单格式、
-实务画像 CLAUDE.md 机制、共享护栏体系）为基础，已对其进行大量修改：
-  - 将美国法内容整体重构为中华人民共和国现行法；
-  - 采用"底座原子能力 + 八大业务领域"的四层技能架构（HoriZon 架构）；
-  - 编入宏志整理的 37 项中国法实务技能（合同、争议、公司投融资、尽调、合规、
-    知产、劳动、刑事），覆盖起草、审查、分析、检索、可视化全链路；
-  - 移除与本所业务无关的领域与第三方厂商插件；
-  - 全部技能输出统一标注"律师审查草稿、非法律意见"，并接入来源标签与核验机制。
+2. 借鉴的开源组件
+   插件清单格式（marketplace / plugin manifest）、实务画像配置机制与共享护栏体系的
+   设计衍生自 Anthropic claude-for-legal：
+     Copyright Anthropic, PBC
+     Licensed under the Apache License, Version 2.0
+     https://github.com/anthropics/claude-for-legal
+   本项目已对上述机制做中国法语境的重写与扩展；其美国法实体内容未予采用。
 
-许可证说明：编入的技能来源不一。打包对外发布前，须逐技能核验其原始许可证；
-凡含 CC-BY-NC（禁商用）/-ND（禁改）条款者，不得直接商用打包，仅作内部参考或重写。
-保留原作者署名义务。
+3. 编入的第三方技能
+   部分实务技能编入自多来源整理的中文技能文本，原始许可证逐项核验中；凡含
+   CC-BY-NC（禁商用）/ -ND（禁改）条款者，不直接商用打包，仅作内部参考或重写，
+   并保留原作者署名义务。
 
-商标声明：本项目为宏志律师事务所的独立衍生作品，非 Anthropic 官方产品，未获 Anthropic
-背书，不代表 Anthropic 的法律立场。"Claude" 为 Anthropic, PBC 的商标，本项目仅在描述
-兼容性时使用，不主张任何商标权利。
+商标声明：本项目非 Anthropic 官方产品，未获 Anthropic 背书，不代表 Anthropic 的法律
+立场。"Claude" 为 Anthropic, PBC 的商标，本项目仅在描述兼容性时使用，不主张任何商标
+权利。
 
-免责声明：本项目所有输出均为供执业律师审查的草稿，不构成法律意见，不替代律师的专业判断。
-法律引用须经权威数据库核实后方可依赖。
+免责声明：本项目所有输出均为供执业律师审查的草稿，不构成法律意见，不替代律师的专业
+判断。法律引用须经权威数据库核实后方可依赖。
