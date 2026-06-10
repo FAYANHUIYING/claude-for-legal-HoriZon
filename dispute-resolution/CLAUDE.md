@@ -42,6 +42,10 @@
 
 *接入方法见仓库根 `CONNECTORS.md`；重新检测：`/dispute-resolution:cold-start-interview --check-integrations`*
 
+## 期限台账
+**台账：** `~/.claude/plugins/config/claude-for-legal-horizon/dispute-resolution/deadline-register.yaml`
+录入/完结用 `/dispute-resolution:deadline-tracker log|list|done|verify`；周一（临庭事项每日）运行期限监控代理 `deadline-watcher` 出决策点预警。`verified: false` 的期限一律带 ⚠️ 按"可能更早"对待。台账是辅助线索层，所内办案系统仍是权威记录。
+
 ## 上报链
 | 事项 | 处理 | 上报至 | 何时 |
 |---|---|---|---|
