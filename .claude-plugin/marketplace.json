@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-for-legal-horizon",
-  "description": "宏志律师事务所中国法实务 Claude 插件集（HoriZon 版）。四层架构：底座原子能力 + 商事合同 / 商事争议 / 公司投融资 / 尽调 / 合规 / 知产 / 劳动 / 刑事八大业务领域，共 37 项技能。基于 Anthropic claude-for-legal（Apache-2.0）二次开发，已做大量本地化与原创撰写。非 Anthropic 官方产品，不代表其法律立场。所有输出均为律师审查草稿，非法律意见。",
+  "description": "宏志律师事务所中国法实务 Claude 插件集（HoriZon 版）。四层架构：底座原子能力 + 商事合同 / 商事争议 / 公司投融资 / 尽调 / 合规 / 知产 / 劳动 / 刑事八大业务领域，共 64 项技能（每插件含 cold-start-interview / customize / matter-workspace 三件套）。基于 Anthropic claude-for-legal（Apache-2.0）二次开发，已做大量本地化与原创撰写。非 Anthropic 官方产品，不代表其法律立场。所有输出均为律师审查草稿，非法律意见。",
   "owner": {
     "name": "宏志律师事务所"
   },

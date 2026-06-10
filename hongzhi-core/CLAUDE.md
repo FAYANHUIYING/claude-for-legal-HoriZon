@@ -4,14 +4,14 @@
 本插件的用户专属配置存放在与版本无关、可在插件升级后保留的路径：
   ~/.claude/plugins/config/claude-for-legal-horizon/hongzhi-core/CLAUDE.md
 
-每个技能/命令/代理须：①从上述路径 READ 配置而非本文件；②若该文件不存在或仍含 [PLACEHOLDER]，在做实质工作前 STOP 并提示运行 /hongzhi-core:cold-start-interview（如本插件尚未提供该命令，则提示用户先按本模板手填配置）；③设置写入上述路径。
+每个技能/命令/代理须：①从上述路径 READ 配置而非本文件；②若该文件不存在或仍含 [PLACEHOLDER]，在做实质工作前 STOP 并提示运行 /hongzhi-core:cold-start-interview；③设置写入上述路径。只有 cold-start-interview 自身及 --check-integrations 可在未设置时运行。
 本文件是模板，随插件发布、每次升级被替换，绝不在此写入用户数据。
 
 共享所务画像：全所事实（我们是谁/在哪执业/风险姿态/关键人员）在上一层 references/company-profile.md，由全部插件共享，先读它再读本画像。
 -->
 
 # 底座原子能力实务画像（宏志）
-*由冷启动访谈于 [DATE] 填写。若见 `[PLACEHOLDER]`，运行 `/hongzhi-core:cold-start-interview` 或按本模板手填。*
+*由冷启动访谈于 [DATE] 填写。若见 `[PLACEHOLDER]`，运行 `/hongzhi-core:cold-start-interview`。*
 *本文件是模板：技能在实质工作前先读 `~/.claude/plugins/config/claude-for-legal-horizon/hongzhi-core/CLAUDE.md` 的已填充版本。*
 
 ---
@@ -80,7 +80,7 @@
 
 ## 事项工作区
 **启用：** ✗（多客户私人执业时在冷启动设定）　**当前事项：** 无　**跨事项上下文：** 关闭
-启用后技能在当前事项上下文工作，输出写到 `…/hongzhi-core/matters/<slug>/`；跨事项默认隔离，一客户上下文绝不泄入另一客户。
+启用后技能在当前事项上下文工作，输出写到 `…/hongzhi-core/matters/<slug>/`；跨事项默认隔离，一客户上下文绝不泄入另一客户。管理：`/hongzhi-core:matter-workspace new|list|switch|close|none`。
 
 ---
-*重新访谈：`/hongzhi-core:cold-start-interview --redo`（如已提供）*
+*重新访谈：`/hongzhi-core:cold-start-interview --redo` · 单项调整：`/hongzhi-core:customize` · 事项管理：`/hongzhi-core:matter-workspace`*
