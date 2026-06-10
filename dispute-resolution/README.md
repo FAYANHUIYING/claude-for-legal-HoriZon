@@ -7,7 +7,7 @@
 
 运行 `/dispute-resolution:cold-start-interview`（2 分钟速启 / 15 分钟完整）建立实务画像，写入 `~/.claude/plugins/config/claude-for-legal-horizon/dispute-resolution/CLAUDE.md`（不进仓库）。之后可用 `/dispute-resolution:customize` 单项调整、`/dispute-resolution:matter-workspace` 管理多客户事项隔离。
 
-## 技能（17 项）
+## 技能（19 项）
 
 | 技能 | 说明 |
 |---|---|
@@ -21,11 +21,13 @@
 | `/dispute-resolution:customize` | 引导式定制你的商事争议解决实务画像——修改一项配置而不重新运行完整冷启动访谈。 |
 | `/dispute-resolution:deadline-tracker` | 诉讼/仲裁期限台账管理——录入、查看、完结开庭/举证/答辩/管辖权异议/上诉/再审/ |
 | `/dispute-resolution:defense-statement` | 撰写民事答辩状，针对原告诉讼请求逐项答辩，组织事实抗辩与法律抗辩、反驳对方证据与请求权基础并提出己方主张。 |
+| `/dispute-resolution:element-analysis` | 要件分析表——以请求权基础为纲，把每项诉讼请求拆解为构成要件，逐要件映射证据 |
 | `/dispute-resolution:judgment-analysis` | 判决书深度拆解与法律错误识别工具，评估上诉策略与再审事由并输出救济路径建议。 |
 | `/dispute-resolution:lawyer-letter` | 起草律师函、催告函与律师声明的专项技能。 |
 | `/dispute-resolution:litigation-full-process` | 诉讼案件全流程分析与策略辅助。 |
 | `/dispute-resolution:litigation-visualization` | 把案件事实转成可打印的可视化图表。 |
 | `/dispute-resolution:matter-workspace` | 管理事项工作区——新建、列表、切换、关闭或脱离（实务级）。 |
+| `/dispute-resolution:portfolio-status` | 组合视图——把全部在办事项的进展拼成一张总表：每案的阶段、最近动态、停滞天数、 |
 | `/dispute-resolution:retrial-analysis` | 民事再审可行性分析 — 读取生效判决书、原审证据与庭审笔录，识别原审事实、证据、论理、法律适用方面的错误与瑕疵，逐项匹配《民事诉讼法》法定再审事由，输出再审可行性分析报告。 |
 | `/dispute-resolution:settlement` | 起草和解协议与调解协议的专业技能。 |
 

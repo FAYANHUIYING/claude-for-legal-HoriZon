@@ -87,6 +87,7 @@
 ## 事项工作区
 **启用：** ✗（多客户私人执业时在冷启动设定）　**当前事项：** 无　**跨事项上下文：** 关闭
 启用后技能在当前事项上下文工作，输出写到 `…/dispute-resolution/matters/<slug>/`；跨事项默认隔离，一客户上下文绝不泄入另一客户。管理：`/dispute-resolution:matter-workspace new|list|switch|close|none`。
+**事项历史写入约定**：实质技能在事项上下文完成交付后，向该事项 `history.md` 追加一行 `## [YYYY-MM-DD] — [技能名] — [一句话成果]`（仅追加，最新在上）。组合视图（`/dispute-resolution:portfolio-status`）与期限监控代理依赖此记录衡量案件活跃度——没写历史的工作对它们不可见。
 
 ---
 *重新访谈：`/dispute-resolution:cold-start-interview --redo` · 单项调整：`/dispute-resolution:customize` · 事项管理：`/dispute-resolution:matter-workspace`*

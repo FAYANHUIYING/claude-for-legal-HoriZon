@@ -7,7 +7,7 @@
 
 运行 `/commercial-contract:cold-start-interview`（2 分钟速启 / 15 分钟完整）建立实务画像，写入 `~/.claude/plugins/config/claude-for-legal-horizon/commercial-contract/CLAUDE.md`（不进仓库）。之后可用 `/commercial-contract:customize` 单项调整、`/commercial-contract:matter-workspace` 管理多客户事项隔离。
 
-## 技能（5 项）
+## 技能（7 项）
 
 | 技能 | 说明 |
 |---|---|
@@ -15,7 +15,13 @@
 | `/commercial-contract:contract-drafting` | 从零起草各类合同的专业技能，覆盖买卖、服务、技术、许可、合作、建设工程等常见类型，按六步法推进（需求确认→法律调研→框架搭建→条款设计→风险扫描→文档生成），内置谈判立场三级分档与多维风险扫描。 |
 | `/commercial-contract:contract-review` | 合同审查助手。 |
 | `/commercial-contract:customize` | 引导式定制你的商事合同实务画像——修改一项配置而不重新运行完整冷启动访谈。 |
+| `/commercial-contract:deal-debrief` | 签约复盘——趁记忆新鲜，把近期签署合同中偏离审查口径（playbook）的条款逐条 |
 | `/commercial-contract:matter-workspace` | 管理事项工作区——新建、列表、切换、关闭或脱离（实务级）。 |
+| `/commercial-contract:review-proposals` | 审批口径更新提案——逐条处理 playbook-monitor 代理生成的待审提案：批准则把新口径 |
+
+## 口径自学习闭环（playbook-monitor 代理）
+
+`contract-review` 发现偏离 → `/commercial-contract:deal-debrief` 周复盘记入偏离日志 → **playbook-monitor 代理**（同一条款滚动 12 个月偏离满 5 次（可调）起草口径更新提案）→ `/commercial-contract:review-proposals` 律师逐条批准/修改/拒绝后落地。让审查口径跟着实际成交进化，而不是跟着"谁记得去更新"。代理绝不自动修改 playbook。
 
 ## 护栏与法条库
 

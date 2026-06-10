@@ -15,7 +15,7 @@
   README.md                        # 插件说明（技能清单自动生成）
   skills/<名>/SKILL.md             # 一目录一技能
   hooks/hooks.json                 # 空桩 {"hooks":{}}
-  agents/<名>.md                    # 监控代理（目前：dispute-resolution/deadline-watcher）
+  agents/<名>.md                    # 监控代理（dispute-resolution/deadline-watcher、commercial-contract/playbook-monitor）
   references/<插件>-core.md         # 该领域中国法核心法条库（占位，待官方源核验）
   references/company-profile-template.md  # 共享所务画像模板（cold-start 首个插件时写入共享画像）
 references/                        # 跨插件共享模板（company-profile / dashboard）
@@ -23,15 +23,15 @@ references/                        # 跨插件共享模板（company-profile / d
 
 四层架构：**底座层** `hongzhi-core`（被各业务插件反复调用的原子能力）→ **业务层** 8 插件 → **检索/数据层**（元典/北大法宝/飞书，仅接已开通者）。
 
-## 插件与技能（9 插件 / 65 技能 / 1 代理）
+## 插件与技能（9 插件 / 69 技能 / 2 代理）
 
 三件套 = cold-start-interview / customize / matter-workspace（每插件均含，按领域定制）。
 
 | 插件 | 技能数 |
 |---|---|
 | hongzhi-core | 11（三件套 + legal-terminology, legal-consequence, evidence-evaluation, evidence-argument-chain, risk-prioritization, legal-analysis, document-summarization, rigorous-answer） |
-| commercial-contract | 5（三件套 + contract-drafting, contract-review） |
-| dispute-resolution | 17（三件套 + deadline-tracker, litigation-full-process, case-intake, case-analysis, case-chronology, civil-complaint-drafting, defense-statement, appeal-petition, agent-brief, judgment-analysis, retrial-analysis, litigation-visualization, lawyer-letter, settlement） |
+| commercial-contract | 7（三件套 + contract-drafting, contract-review, deal-debrief, review-proposals；代理 playbook-monitor） |
+| dispute-resolution | 19（三件套 + deadline-tracker, element-analysis, portfolio-status, litigation-full-process, case-intake, case-analysis, case-chronology, civil-complaint-drafting, defense-statement, appeal-petition, agent-brief, judgment-analysis, retrial-analysis, litigation-visualization, lawyer-letter, settlement） |
 | corporate-investment | 5（三件套 + corporate-docs, legal-opinion） |
 | due-diligence | 4（三件套 + due-diligence-checklist） |
 | compliance | 5（三件套 + ai-compliance, privacy-policy） |

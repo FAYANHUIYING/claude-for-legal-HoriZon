@@ -42,6 +42,9 @@
 
 *接入方法见仓库根 `CONNECTORS.md`；重新检测：`/commercial-contract:cold-start-interview --check-integrations`*
 
+## 口径进化闭环（playbook 自学习）
+`contract-review` 审查发现偏离 → `/commercial-contract:deal-debrief`（周一复盘，记入 `~/.claude/plugins/config/claude-for-legal-horizon/commercial-contract/deviation-log.yaml`）→ `playbook-monitor` 代理（同一条款滚动 12 个月偏离满 5 次（可调）→ 起草提案）→ `/commercial-contract:review-proposals`（律师逐条批准/修改/拒绝，唯一写 playbook 的环节）。合同审查完成时应提议"要不要把本次偏离记入日志？"。
+
 ## 上报链
 | 事项 | 处理 | 上报至 | 何时 |
 |---|---|---|---|
